@@ -4,7 +4,7 @@
 
 ## 编译环境依赖使用vcpkg
 
-[vcpkg]: https://github.com/microsoft/vcpkg
+vcpkg项目地址 https://github.com/microsoft/vcpkg
 
 ### 安装以下环境
 
