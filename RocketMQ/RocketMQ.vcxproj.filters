@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{60541cee-3cb6-463d-939e-fd826a8cb66c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e32d2be3-c726-4455-a7fa-dcb10cc99adb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="consumer">
+      <UniqueIdentifier>{90c3c628-24ad-418d-a176-612a0af4eb21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extern">
+      <UniqueIdentifier>{9c90653a-b8c4-408c-b3bd-851c9a91c528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{6a94470f-dc35-49e6-9ffd-08709de83e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol">
+      <UniqueIdentifier>{d23b13e1-a50f-4a7f-a29c-f9bfbd566324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transport">
+      <UniqueIdentifier>{81a26495-e209-48d6-bf8a-312bf7b36ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="message">
+      <UniqueIdentifier>{5b844882-a054-4369-acd0-cdeb1095a832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trace">
+      <UniqueIdentifier>{5dcc6829-1927-4327-a018-39653229b1f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thread">
+      <UniqueIdentifier>{0e07c1c4-78b8-4027-a9f9-586c17ca23d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="status">
+      <UniqueIdentifier>{de8c55f8-af4d-4db4-95ec-9ed9e8e407e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="producer">
+      <UniqueIdentifier>{36d71124-a198-4a8b-839b-4f9f490cc5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="signature">
+      <UniqueIdentifier>{f64f5ce4-51e9-4e41-93d5-1b0e28371052}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\Arg_helper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\AsyncCallback.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CBatchMessage.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CCommon.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CErrorMessage.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CMessage.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CMessageExt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CMessageQueue.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CMQException.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\ConsumeType.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CProducer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CPullConsumer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CPullResult.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CPushConsumer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CSendResult.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\CTransactionStatus.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\DefaultMQProducer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\DefaultMQPullConsumer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\DefaultMQPushConsumer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQClientException.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQMessage.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQMessageExt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQMessageListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQMessageQueue.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQSelector.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQueueListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\PullResult.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\RocketMQClient.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\SendResult.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\SessionCredentials.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\TransactionListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\TransactionMQProducer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\TransactionSendResult.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\include\MQClient.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\AsyncArg.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\AsyncCallbackWrap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\big_endian.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\ByteOrder.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\ClientRPCHook.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\CommunicationMode.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\dataBlock.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\FilterAPI.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\InputStream.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\MemoryInputStream.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\MemoryOutputStream.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\MessageAccessor.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\MessageSysFlag.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\MQClientErrorContainer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\MQVersion.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\NameSpaceUtil.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\NamesrvConfig.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\noncopyable.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\OutputStream.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\PermName.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\PullSysFlag.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\ServiceState.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\SubscriptionGroupConfig.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\sync_http_client.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\TopAddressing.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\TopicConfig.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\TopicFilterType.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\url.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\UtilAll.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\Validators.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\common\VirtualEnvUtil.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\AllocateMQStrategy.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\ConsumeMessageHookImpl.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\ConsumeMsgService.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\DefaultMQPullConsumerImpl.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\DefaultMQPushConsumerImpl.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\FindBrokerResult.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\OffsetStore.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\PullAPIWrapper.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\PullRequest.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\PullResultExt.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\Rebalance.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\consumer\SubscriptionData.h">
+      <Filter>consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\MQClientAPIImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\MQClientFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\MQClientManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\log\Logging.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\CommandHeader.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\ConsumerRunningInfo.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\HeartbeatData.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\KVTable.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\LockBatchBody.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\MessageQueue.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\MQProtos.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\ProcessQueueInfo.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\RemotingCommand.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\RemotingSerializable.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\TopicList.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\protocol\TopicRouteData.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\transport\ClientRemotingProcessor.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\transport\EventLoop.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\transport\ResponseFuture.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\transport\SocketUtil.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\transport\TcpRemotingClient.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\transport\TcpTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\message\MQDecoder.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\message\MQMessageId.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\ConsumeMessageContext.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\ConsumeMessageHook.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\SendMessageContext.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\SendMessageHook.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\TraceBean.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\TraceContext.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\TraceTransferBean.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\TraceUtil.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptorLFQ.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\task_queue.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\batch_descriptor.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\claim_strategy.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\event_processor.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\event_publisher.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\exception_handler.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\exceptions.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\interface.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\ring_buffer.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\sequence.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\sequence_barrier.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\sequencer.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\utils.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\thread\disruptor\wait_strategy.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\status\ConsumeStats.h">
+      <Filter>status</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\status\StatsItem.h">
+      <Filter>status</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\status\StatsServer.h">
+      <Filter>status</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\status\StatsServerManager.h">
+      <Filter>status</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\producer\DefaultMQProducerImpl.h">
+      <Filter>producer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\producer\SendMessageHookImpl.h">
+      <Filter>producer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\producer\StringIdMaker.h">
+      <Filter>producer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\producer\TopicPublishInfo.h">
+      <Filter>producer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\producer\TransactionMQProducerImpl.h">
+      <Filter>producer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\base64.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\hmac.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\param_list.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\sha1.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\sha256.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\sha512.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\spas_client.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\libs\signature\include\u64.h">
+      <Filter>signature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\env.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\apache\src\trace\TraceConstant.h">
+      <Filter>trace</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\Arg_helper.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\AsyncCallbackWrap.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\big_endian.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\ClientRPCHook.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\dataBlock.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\DefaultMQClient.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\InputStream.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\MemoryInputStream.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\MemoryOutputStream.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\MessageAccessor.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\MessageSysFlag.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\MQClientErrorContainer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\MQVersion.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\NameSpaceUtil.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\OutputStream.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\PermName.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\PullSysFlag.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\sync_http_client.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\TopAddressing.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\TopicConfig.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\url.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\UtilAll.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\Validators.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\common\VirtualEnvUtil.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\ConsumeMessageConcurrentlyService.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\ConsumeMessageHookImpl.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\ConsumeMessageOrderlyService.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPullConsumer.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPullConsumerImpl.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPushConsumer.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPushConsumerImpl.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\OffsetStore.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\PullAPIWrapper.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\PullRequest.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\PullResult.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\Rebalance.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\consumer\SubscriptionData.cpp">
+      <Filter>consumer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CBatchMessage.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CErrorMessage.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CMessage.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CMessageExt.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CProducer.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CPullConsumer.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CPushConsumer.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\extern\CSendResult.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\MQClientAPIImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\MQClientFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\MQClientManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\log\Logging.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\protocol\CommandHeader.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\protocol\ConsumerRunningInfo.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\protocol\LockBatchBody.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\protocol\MessageQueue.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\protocol\RemotingCommand.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\transport\ClientRemotingProcessor.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\transport\EventLoop.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\transport\ResponseFuture.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\transport\SocketUtil.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\transport\TcpRemotingClient.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\transport\TcpTransport.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\message\BatchMessage.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\message\MQDecoder.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\message\MQMessage.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\message\MQMessageExt.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\message\MQMessageQueue.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\ConsumeMessageContext.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\SendMessageContext.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\TraceBean.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\TraceContext.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\TraceTransferBean.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\TraceUtil.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\thread\task_queue.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\status\ConsumeStats.cpp">
+      <Filter>status</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\status\StatsServer.cpp">
+      <Filter>status</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\status\StatsServerManager.cpp">
+      <Filter>status</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\DefaultMQProducer.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\DefaultMQProducerImpl.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\SendMessageHookImpl.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\SendResult.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\StringIdMaker.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\TransactionMQProducer.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\producer\TransactionMQProducerImpl.cpp">
+      <Filter>producer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\base64.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\hmac.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\param_list.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\sha1.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\sha256.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\sha512.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\libs\signature\src\spas_client.c">
+      <Filter>signature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\env.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\apache\src\trace\TraceConstant.cpp">
+      <Filter>trace</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

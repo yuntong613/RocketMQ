@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B741F509-2763-450C-B577-47D760A7F684}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RocketMQ</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ROCKETMQCLIENT_EXPORTS;_WINDOWS;_USRDLL;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0601;BOOST_BIND_GLOBAL_PLACEHOLDERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\apache\include;..\..\apache\src;..\..\apache\src\common;..\..\apache\src\consumer;..\..\apache\src\extern;..\..\apache\src\include;..\..\apache\src\log;..\..\apache\src\message;..\..\apache\src\producer;..\..\apache\src\protocol;..\..\apache\src\status;..\..\apache\src\thread;..\..\apache\src\trace;..\..\apache\src\transport;..\..\apache\libs\signature\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4251;4275;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ROCKETMQCLIENT_EXPORTS;_WINDOWS;_USRDLL;WIN32;_WIN32_WINNT=0x0601;BOOST_BIND_GLOBAL_PLACEHOLDERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\apache\include;..\..\apache\src;..\..\apache\src\common;..\..\apache\src\consumer;..\..\apache\src\extern;..\..\apache\src\include;..\..\apache\src\log;..\..\apache\src\message;..\..\apache\src\producer;..\..\apache\src\protocol;..\..\apache\src\status;..\..\apache\src\thread;..\..\apache\src\trace;..\..\apache\src\transport;..\..\apache\libs\signature\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4251;4275;4244</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ROCKETMQCLIENT_EXPORTS;_WINDOWS;_USRDLL;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0601;BOOST_BIND_GLOBAL_PLACEHOLDERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\apache\include;..\..\apache\src;..\..\apache\src\common;..\..\apache\src\consumer;..\..\apache\src\extern;..\..\apache\src\include;..\..\apache\src\log;..\..\apache\src\message;..\..\apache\src\producer;..\..\apache\src\protocol;..\..\apache\src\status;..\..\apache\src\thread;..\..\apache\src\trace;..\..\apache\src\transport;..\..\apache\libs\signature\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4251;4275;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;ROCKETMQCLIENT_EXPORTS;_WINDOWS;_USRDLL;WIN32;_WIN32_WINNT=0x0601;BOOST_BIND_GLOBAL_PLACEHOLDERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\apache\include;..\..\apache\src;..\..\apache\src\common;..\..\apache\src\consumer;..\..\apache\src\extern;..\..\apache\src\include;..\..\apache\src\log;..\..\apache\src\message;..\..\apache\src\producer;..\..\apache\src\protocol;..\..\apache\src\status;..\..\apache\src\thread;..\..\apache\src\trace;..\..\apache\src\transport;..\..\apache\libs\signature\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4251;4275;4244</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\apache\include\Arg_helper.h" />
+    <ClInclude Include="..\..\apache\include\AsyncCallback.h" />
+    <ClInclude Include="..\..\apache\include\CBatchMessage.h" />
+    <ClInclude Include="..\..\apache\include\CCommon.h" />
+    <ClInclude Include="..\..\apache\include\CErrorMessage.h" />
+    <ClInclude Include="..\..\apache\include\CMessage.h" />
+    <ClInclude Include="..\..\apache\include\CMessageExt.h" />
+    <ClInclude Include="..\..\apache\include\CMessageQueue.h" />
+    <ClInclude Include="..\..\apache\include\CMQException.h" />
+    <ClInclude Include="..\..\apache\include\ConsumeType.h" />
+    <ClInclude Include="..\..\apache\include\CProducer.h" />
+    <ClInclude Include="..\..\apache\include\CPullConsumer.h" />
+    <ClInclude Include="..\..\apache\include\CPullResult.h" />
+    <ClInclude Include="..\..\apache\include\CPushConsumer.h" />
+    <ClInclude Include="..\..\apache\include\CSendResult.h" />
+    <ClInclude Include="..\..\apache\include\CTransactionStatus.h" />
+    <ClInclude Include="..\..\apache\include\DefaultMQProducer.h" />
+    <ClInclude Include="..\..\apache\include\DefaultMQPullConsumer.h" />
+    <ClInclude Include="..\..\apache\include\DefaultMQPushConsumer.h" />
+    <ClInclude Include="..\..\apache\include\MQClient.h" />
+    <ClInclude Include="..\..\apache\include\MQClientException.h" />
+    <ClInclude Include="..\..\apache\include\MQMessage.h" />
+    <ClInclude Include="..\..\apache\include\MQMessageExt.h" />
+    <ClInclude Include="..\..\apache\include\MQMessageListener.h" />
+    <ClInclude Include="..\..\apache\include\MQMessageQueue.h" />
+    <ClInclude Include="..\..\apache\include\MQSelector.h" />
+    <ClInclude Include="..\..\apache\include\MQueueListener.h" />
+    <ClInclude Include="..\..\apache\include\PullResult.h" />
+    <ClInclude Include="..\..\apache\include\RocketMQClient.h" />
+    <ClInclude Include="..\..\apache\include\SendResult.h" />
+    <ClInclude Include="..\..\apache\include\SessionCredentials.h" />
+    <ClInclude Include="..\..\apache\include\TransactionListener.h" />
+    <ClInclude Include="..\..\apache\include\TransactionMQProducer.h" />
+    <ClInclude Include="..\..\apache\include\TransactionSendResult.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\base64.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\hmac.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\param_list.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\sha1.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\sha256.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\sha512.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\spas_client.h" />
+    <ClInclude Include="..\..\apache\libs\signature\include\u64.h" />
+    <ClInclude Include="..\..\apache\src\common\AsyncArg.h" />
+    <ClInclude Include="..\..\apache\src\common\AsyncCallbackWrap.h" />
+    <ClInclude Include="..\..\apache\src\common\big_endian.h" />
+    <ClInclude Include="..\..\apache\src\common\ByteOrder.h" />
+    <ClInclude Include="..\..\apache\src\common\ClientRPCHook.h" />
+    <ClInclude Include="..\..\apache\src\common\CommunicationMode.h" />
+    <ClInclude Include="..\..\apache\src\common\dataBlock.h" />
+    <ClInclude Include="..\..\apache\src\common\FilterAPI.h" />
+    <ClInclude Include="..\..\apache\src\common\InputStream.h" />
+    <ClInclude Include="..\..\apache\src\common\MemoryInputStream.h" />
+    <ClInclude Include="..\..\apache\src\common\MemoryOutputStream.h" />
+    <ClInclude Include="..\..\apache\src\common\MessageAccessor.h" />
+    <ClInclude Include="..\..\apache\src\common\MessageSysFlag.h" />
+    <ClInclude Include="..\..\apache\src\common\MQClientErrorContainer.h" />
+    <ClInclude Include="..\..\apache\src\common\MQVersion.h" />
+    <ClInclude Include="..\..\apache\src\common\NameSpaceUtil.h" />
+    <ClInclude Include="..\..\apache\src\common\NamesrvConfig.h" />
+    <ClInclude Include="..\..\apache\src\common\noncopyable.h" />
+    <ClInclude Include="..\..\apache\src\common\OutputStream.h" />
+    <ClInclude Include="..\..\apache\src\common\PermName.h" />
+    <ClInclude Include="..\..\apache\src\common\PullSysFlag.h" />
+    <ClInclude Include="..\..\apache\src\common\ServiceState.h" />
+    <ClInclude Include="..\..\apache\src\common\SubscriptionGroupConfig.h" />
+    <ClInclude Include="..\..\apache\src\common\sync_http_client.h" />
+    <ClInclude Include="..\..\apache\src\common\TopAddressing.h" />
+    <ClInclude Include="..\..\apache\src\common\TopicConfig.h" />
+    <ClInclude Include="..\..\apache\src\common\TopicFilterType.h" />
+    <ClInclude Include="..\..\apache\src\common\url.h" />
+    <ClInclude Include="..\..\apache\src\common\UtilAll.h" />
+    <ClInclude Include="..\..\apache\src\common\Validators.h" />
+    <ClInclude Include="..\..\apache\src\common\VirtualEnvUtil.h" />
+    <ClInclude Include="..\..\apache\src\consumer\AllocateMQStrategy.h" />
+    <ClInclude Include="..\..\apache\src\consumer\ConsumeMessageHookImpl.h" />
+    <ClInclude Include="..\..\apache\src\consumer\ConsumeMsgService.h" />
+    <ClInclude Include="..\..\apache\src\consumer\DefaultMQPullConsumerImpl.h" />
+    <ClInclude Include="..\..\apache\src\consumer\DefaultMQPushConsumerImpl.h" />
+    <ClInclude Include="..\..\apache\src\consumer\FindBrokerResult.h" />
+    <ClInclude Include="..\..\apache\src\consumer\OffsetStore.h" />
+    <ClInclude Include="..\..\apache\src\consumer\PullAPIWrapper.h" />
+    <ClInclude Include="..\..\apache\src\consumer\PullRequest.h" />
+    <ClInclude Include="..\..\apache\src\consumer\PullResultExt.h" />
+    <ClInclude Include="..\..\apache\src\consumer\Rebalance.h" />
+    <ClInclude Include="..\..\apache\src\consumer\SubscriptionData.h" />
+    <ClInclude Include="..\..\apache\src\env.h" />
+    <ClInclude Include="..\..\apache\src\log\Logging.h" />
+    <ClInclude Include="..\..\apache\src\message\MQDecoder.h" />
+    <ClInclude Include="..\..\apache\src\message\MQMessageId.h" />
+    <ClInclude Include="..\..\apache\src\MQClientAPIImpl.h" />
+    <ClInclude Include="..\..\apache\src\MQClientFactory.h" />
+    <ClInclude Include="..\..\apache\src\MQClientManager.h" />
+    <ClInclude Include="..\..\apache\src\producer\DefaultMQProducerImpl.h" />
+    <ClInclude Include="..\..\apache\src\producer\SendMessageHookImpl.h" />
+    <ClInclude Include="..\..\apache\src\producer\StringIdMaker.h" />
+    <ClInclude Include="..\..\apache\src\producer\TopicPublishInfo.h" />
+    <ClInclude Include="..\..\apache\src\producer\TransactionMQProducerImpl.h" />
+    <ClInclude Include="..\..\apache\src\protocol\CommandHeader.h" />
+    <ClInclude Include="..\..\apache\src\protocol\ConsumerRunningInfo.h" />
+    <ClInclude Include="..\..\apache\src\protocol\HeartbeatData.h" />
+    <ClInclude Include="..\..\apache\src\protocol\KVTable.h" />
+    <ClInclude Include="..\..\apache\src\protocol\LockBatchBody.h" />
+    <ClInclude Include="..\..\apache\src\protocol\MessageQueue.h" />
+    <ClInclude Include="..\..\apache\src\protocol\MQProtos.h" />
+    <ClInclude Include="..\..\apache\src\protocol\ProcessQueueInfo.h" />
+    <ClInclude Include="..\..\apache\src\protocol\RemotingCommand.h" />
+    <ClInclude Include="..\..\apache\src\protocol\RemotingSerializable.h" />
+    <ClInclude Include="..\..\apache\src\protocol\TopicList.h" />
+    <ClInclude Include="..\..\apache\src\protocol\TopicRouteData.h" />
+    <ClInclude Include="..\..\apache\src\status\ConsumeStats.h" />
+    <ClInclude Include="..\..\apache\src\status\StatsItem.h" />
+    <ClInclude Include="..\..\apache\src\status\StatsServer.h" />
+    <ClInclude Include="..\..\apache\src\status\StatsServerManager.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptorLFQ.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\batch_descriptor.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\claim_strategy.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\event_processor.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\event_publisher.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\exceptions.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\exception_handler.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\interface.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\ring_buffer.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\sequence.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\sequencer.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\sequence_barrier.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\utils.h" />
+    <ClInclude Include="..\..\apache\src\thread\disruptor\wait_strategy.h" />
+    <ClInclude Include="..\..\apache\src\thread\task_queue.h" />
+    <ClInclude Include="..\..\apache\src\trace\ConsumeMessageContext.h" />
+    <ClInclude Include="..\..\apache\src\trace\ConsumeMessageHook.h" />
+    <ClInclude Include="..\..\apache\src\trace\SendMessageContext.h" />
+    <ClInclude Include="..\..\apache\src\trace\SendMessageHook.h" />
+    <ClInclude Include="..\..\apache\src\trace\TraceBean.h" />
+    <ClInclude Include="..\..\apache\src\trace\TraceConstant.h" />
+    <ClInclude Include="..\..\apache\src\trace\TraceContext.h" />
+    <ClInclude Include="..\..\apache\src\trace\TraceTransferBean.h" />
+    <ClInclude Include="..\..\apache\src\trace\TraceUtil.h" />
+    <ClInclude Include="..\..\apache\src\transport\ClientRemotingProcessor.h" />
+    <ClInclude Include="..\..\apache\src\transport\EventLoop.h" />
+    <ClInclude Include="..\..\apache\src\transport\ResponseFuture.h" />
+    <ClInclude Include="..\..\apache\src\transport\SocketUtil.h" />
+    <ClInclude Include="..\..\apache\src\transport\TcpRemotingClient.h" />
+    <ClInclude Include="..\..\apache\src\transport\TcpTransport.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\apache\libs\signature\src\base64.c" />
+    <ClCompile Include="..\..\apache\libs\signature\src\hmac.c" />
+    <ClCompile Include="..\..\apache\libs\signature\src\param_list.c" />
+    <ClCompile Include="..\..\apache\libs\signature\src\sha1.c" />
+    <ClCompile Include="..\..\apache\libs\signature\src\sha256.c" />
+    <ClCompile Include="..\..\apache\libs\signature\src\sha512.c" />
+    <ClCompile Include="..\..\apache\libs\signature\src\spas_client.c" />
+    <ClCompile Include="..\..\apache\src\common\Arg_helper.cpp" />
+    <ClCompile Include="..\..\apache\src\common\AsyncCallbackWrap.cpp" />
+    <ClCompile Include="..\..\apache\src\common\big_endian.cpp" />
+    <ClCompile Include="..\..\apache\src\common\ClientRPCHook.cpp" />
+    <ClCompile Include="..\..\apache\src\common\dataBlock.cpp" />
+    <ClCompile Include="..\..\apache\src\common\DefaultMQClient.cpp" />
+    <ClCompile Include="..\..\apache\src\common\InputStream.cpp" />
+    <ClCompile Include="..\..\apache\src\common\MemoryInputStream.cpp" />
+    <ClCompile Include="..\..\apache\src\common\MemoryOutputStream.cpp" />
+    <ClCompile Include="..\..\apache\src\common\MessageAccessor.cpp" />
+    <ClCompile Include="..\..\apache\src\common\MessageSysFlag.cpp" />
+    <ClCompile Include="..\..\apache\src\common\MQClientErrorContainer.cpp" />
+    <ClCompile Include="..\..\apache\src\common\MQVersion.cpp" />
+    <ClCompile Include="..\..\apache\src\common\NameSpaceUtil.cpp" />
+    <ClCompile Include="..\..\apache\src\common\OutputStream.cpp" />
+    <ClCompile Include="..\..\apache\src\common\PermName.cpp" />
+    <ClCompile Include="..\..\apache\src\common\PullSysFlag.cpp" />
+    <ClCompile Include="..\..\apache\src\common\sync_http_client.cpp" />
+    <ClCompile Include="..\..\apache\src\common\TopAddressing.cpp" />
+    <ClCompile Include="..\..\apache\src\common\TopicConfig.cpp" />
+    <ClCompile Include="..\..\apache\src\common\url.cpp" />
+    <ClCompile Include="..\..\apache\src\common\UtilAll.cpp" />
+    <ClCompile Include="..\..\apache\src\common\Validators.cpp" />
+    <ClCompile Include="..\..\apache\src\common\VirtualEnvUtil.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\ConsumeMessageConcurrentlyService.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\ConsumeMessageHookImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\ConsumeMessageOrderlyService.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPullConsumer.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPullConsumerImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPushConsumer.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\DefaultMQPushConsumerImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\OffsetStore.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\PullAPIWrapper.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\PullRequest.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\PullResult.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\Rebalance.cpp" />
+    <ClCompile Include="..\..\apache\src\consumer\SubscriptionData.cpp" />
+    <ClCompile Include="..\..\apache\src\env.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CBatchMessage.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CErrorMessage.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CMessage.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CMessageExt.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CProducer.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CPullConsumer.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CPushConsumer.cpp" />
+    <ClCompile Include="..\..\apache\src\extern\CSendResult.cpp" />
+    <ClCompile Include="..\..\apache\src\log\Logging.cpp" />
+    <ClCompile Include="..\..\apache\src\message\BatchMessage.cpp" />
+    <ClCompile Include="..\..\apache\src\message\MQDecoder.cpp" />
+    <ClCompile Include="..\..\apache\src\message\MQMessage.cpp" />
+    <ClCompile Include="..\..\apache\src\message\MQMessageExt.cpp" />
+    <ClCompile Include="..\..\apache\src\message\MQMessageQueue.cpp" />
+    <ClCompile Include="..\..\apache\src\MQClientAPIImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\MQClientFactory.cpp" />
+    <ClCompile Include="..\..\apache\src\MQClientManager.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\DefaultMQProducer.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\DefaultMQProducerImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\SendMessageHookImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\SendResult.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\StringIdMaker.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\TransactionMQProducer.cpp" />
+    <ClCompile Include="..\..\apache\src\producer\TransactionMQProducerImpl.cpp" />
+    <ClCompile Include="..\..\apache\src\protocol\CommandHeader.cpp" />
+    <ClCompile Include="..\..\apache\src\protocol\ConsumerRunningInfo.cpp" />
+    <ClCompile Include="..\..\apache\src\protocol\LockBatchBody.cpp" />
+    <ClCompile Include="..\..\apache\src\protocol\MessageQueue.cpp" />
+    <ClCompile Include="..\..\apache\src\protocol\RemotingCommand.cpp" />
+    <ClCompile Include="..\..\apache\src\status\ConsumeStats.cpp" />
+    <ClCompile Include="..\..\apache\src\status\StatsServer.cpp" />
+    <ClCompile Include="..\..\apache\src\status\StatsServerManager.cpp" />
+    <ClCompile Include="..\..\apache\src\thread\task_queue.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\ConsumeMessageContext.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\SendMessageContext.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\TraceBean.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\TraceConstant.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\TraceContext.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\TraceTransferBean.cpp" />
+    <ClCompile Include="..\..\apache\src\trace\TraceUtil.cpp" />
+    <ClCompile Include="..\..\apache\src\transport\ClientRemotingProcessor.cpp" />
+    <ClCompile Include="..\..\apache\src\transport\EventLoop.cpp" />
+    <ClCompile Include="..\..\apache\src\transport\ResponseFuture.cpp" />
+    <ClCompile Include="..\..\apache\src\transport\SocketUtil.cpp" />
+    <ClCompile Include="..\..\apache\src\transport\TcpRemotingClient.cpp" />
+    <ClCompile Include="..\..\apache\src\transport\TcpTransport.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
