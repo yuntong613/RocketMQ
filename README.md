@@ -9,6 +9,6 @@ vcpkg项目地址 https://github.com/microsoft/vcpkg
 ### 安装以下环境
 
 ```shell
-vcpkg install boost-iostreams jsoncpp libevent[openssl] --triplet x64-windows
+vcpkg install boost-log boost-iostreams boost-locale boost-lambda boost-foreach jsoncpp libevent[openssl] --triplet x64-windows
 ```
 
